@@ -1,0 +1,70 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.label {
+    cursor: pointer;
+}
+
+.input {
+    width: 0px;
+
+    position: relative;
+
+    &::before {
+        display: flex;
+        content: '';
+
+        width: 20px;
+        height: 10px;
+
+        border-radius: 20px;
+        background-color: red;
+
+        cursor: pointer;
+
+        position: absolute;
+        left: 0px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        transition: .3s;
+        transition-timing-function: linear;
+    }
+
+    &:checked {
+        &::after {
+            left: 10px;
+            background-color: antiquewhite;
+        }
+
+        &::before {
+            background-color: rgb(3, 255, 3);
+        }
+    }
+
+    &::after {
+        display: flex;
+        content: '';
+
+        width: 10px;
+        height: 10px;
+
+        border-radius: 50%;
+        background-color: aqua;
+
+        cursor: pointer;
+
+        position: absolute;
+        left: 0px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        transition: .3s;
+        transition-timing-function: ease;
+    }
+}

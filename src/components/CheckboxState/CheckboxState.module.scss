@@ -1,0 +1,40 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+}
+
+.title {
+    cursor: pointer;
+}
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 10px;
+    height: 10px;
+
+    border-radius: 50%;
+
+    border: 1px solid #000;
+
+    cursor: pointer;
+
+    &__circle {
+        width: 5px;
+        height: 5px;
+
+        background-color: rgb(0, 255, 0);
+        border-radius: 50%;
+
+        transition: .3s;
+
+        opacity: 0;
+
+        &_active {
+            opacity: 1;
+        }
+    }
+}

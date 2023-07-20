@@ -1,7 +1,9 @@
-export default function page () {
+import { Form } from "@/modules";
+
+export default function Home() {
     return (
-        <div>
-            Главная
-        </div>
+        <>
+            <Form />
+        </>
     );
 };

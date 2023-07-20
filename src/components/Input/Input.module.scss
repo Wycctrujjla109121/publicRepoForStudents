@@ -1,0 +1,77 @@
+.wrapper {
+    padding-top: 20px;
+
+    width: fit-content;
+
+    position: relative;
+}
+
+.input {
+    font-size: 20px;
+
+    background-color: transparent;
+
+    user-select: none;
+
+    &__small {
+        font-size: 10px;
+    }
+
+    &__default {
+        font-size: 20px;
+    }
+
+    &__large {
+        font-size: 30px;
+    }
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:focus {
+        ~.span {
+            top: 0px;
+
+            font-size: 14px;
+        }
+    }
+
+    &:not(:placeholder-shown) {
+        ~.span {
+            top: 0px;
+
+            font-size: 14px;
+        }
+    }
+
+    &_center {
+        &::placeholder {
+            color: red;
+
+            transition: .3s;
+        }
+
+        &:focus {
+            &::placeholder {
+                color: transparent;
+            }
+        }
+    }
+}
+
+.span {
+    position: absolute;
+    top: 21px;
+    left: 2.5px;
+
+    font-size: 20px;
+
+    transition: .3s;
+
+    &_hidden {
+        display: none;
+    }
+
+    user-select: none;
+}
