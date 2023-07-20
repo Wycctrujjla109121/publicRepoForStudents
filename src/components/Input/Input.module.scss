@@ -58,6 +58,10 @@
             }
         }
     }
+
+    &_error {
+        border-color: red;
+    }
 }
 
 .span {
